@@ -1,0 +1,311 @@
+/* ============================================
+   PURE LIQUID GLASS WAYBAR
+   No GTK shadows · Water on glass · Stunning
+   ============================================ */
+window.background {
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 15px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    /* Kill ALL GTK shadows everywhere */
+    box-shadow: none;
+}
+
+/* Kill the ugly GTK window shadow completely */
+window#waybar {
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+/* Also kill it on the inner widget */
+window#waybar > box {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+/* ---- LIQUID GLASS PILLS ---- */
+.modules-left {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.22) 0%,
+        rgba(255, 255, 255, 0.10) 40%,
+        rgba(255, 255, 255, 0.16) 100%
+    );
+    border-radius: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.55);
+    border-left: 1px solid rgba(255, 255, 255, 0.30);
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin: 6px 0;
+    padding: 0 6px;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.15),
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.50),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.modules-center {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.26) 0%,
+        rgba(255, 255, 255, 0.12) 40%,
+        rgba(255, 255, 255, 0.20) 100%
+    );
+    border-radius: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.60);
+    border-left: 1px solid rgba(255, 255, 255, 0.32);
+    border-right: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin: 6px 0;
+    padding: 0 22px;
+    box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.14),
+        0 1px 3px rgba(0, 0, 0, 0.07),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.55),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.modules-right {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.22) 0%,
+        rgba(255, 255, 255, 0.10) 40%,
+        rgba(255, 255, 255, 0.16) 100%
+    );
+    border-radius: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.55);
+    border-left: 1px solid rgba(255, 255, 255, 0.30);
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin: 6px 0;
+    padding: 0 6px;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.15),
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.50),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* ---- BASE MODULES ---- */
+#workspaces,
+#clock,
+#network,
+#bluetooth,
+#battery,
+#pulseaudio,
+#cpu,
+#memory,
+#temperature,
+#tray,
+#window {
+    padding: 0 8px;
+    color: rgba(255, 255, 255, 0.88);
+    background: transparent;
+    box-shadow: none;
+}
+
+/* ---- SEPARATOR ---- */
+#custom-separator {
+    color: rgba(255, 255, 255, 0.18);
+    font-size: 15px;
+    padding: 0 2px;
+    letter-spacing: 0;
+}
+
+/* ---- WORKSPACES ---- */
+#workspaces button {
+    padding: 2px 12px;
+    margin: 5px 1px;
+    border-radius: 14px;
+    color: rgba(255, 255, 255, 0.32);
+    background: transparent;
+    border: 1px solid transparent;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 26px;
+    box-shadow: none;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 0.90);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.30);
+}
+
+#workspaces button.active {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.32) 0%,
+        rgba(255, 255, 255, 0.16) 100%
+    );
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.60);
+    border-left: 1px solid rgba(255, 255, 255, 0.32);
+    border-right: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.12),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.50);
+    font-weight: 800;
+}
+
+#workspaces button.urgent {
+    background: rgba(255, 80, 80, 0.20);
+    color: rgba(255, 200, 200, 1);
+    border-color: rgba(255, 80, 80, 0.30);
+}
+
+/* ---- WINDOW TITLE ---- */
+#window {
+    color: rgba(255, 255, 255, 0.70);     /* controls title name in workspace */
+    font-size: 15px;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    padding: 0 12px;
+}
+
+
+#custom-arch {
+    color: rgba(255, 255, 255, 0.90);
+    font-size: 18px;
+    padding: 0 10px 0 8px;
+}
+#custom-arch:hover {
+    color: #fff45d;
+}
+
+
+/* ---- CLOCK — glowing centerpiece ---- */
+#clock {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0 4px;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.60),
+        0 0 25px rgba(255, 255, 255, 0.25),
+        0 0 45px rgba(255, 255, 255, 0.10);
+}
+
+#custom-clipboard {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 16px;
+    padding: 0 10px;
+}
+#custom-clipboard:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 10px;
+}
+
+
+
+/* ---- RIGHT MODULES ---- */
+#pulseaudio { color: rgba(255, 255, 255, 0.78); }
+#pulseaudio.muted { color: rgba(255, 255, 255, 0.20); }
+
+#network { color: rgba(255, 255, 255, 0.78); }
+#network.disconnected { color: rgba(255, 110, 110, 0.85); }
+
+#bluetooth { color: rgba(255, 255, 255, 0.78); }
+#bluetooth.connected { color: rgba(255, 255, 255, 0.96); }
+
+#cpu { color: rgba(255, 255, 255, 0.78); }
+#memory { color: rgba(255, 255, 255, 0.78); }
+#temperature { color: rgba(255, 255, 255, 0.78); }
+#temperature.critical {
+    color: rgba(255, 110, 110, 0.95);
+    animation: blink 1s ease-in-out infinite;
+}
+
+#battery { color: rgba(255, 255, 255, 0.78); }
+#battery.warning { color: rgba(255, 215, 110, 0.92); }
+#battery.critical {
+    color: rgba(255, 110, 110, 0.95);
+    animation: blink 1s ease-in-out infinite;
+}
+#battery.charging { color: rgba(180, 255, 200, 0.92); }
+#battery.plugged { color: rgba(180, 255, 200, 0.92); }
+
+/* ---- HOVER — wet glass ripple ---- */
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#temperature:hover,
+#bluetooth:hover {
+    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.08) 100%
+    );
+    border-radius: 12px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
+        0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- TRAY ---- */
+#tray {
+    padding: 0 8px;
+    box-shadow: none;
+}
+#tray > .passive { -gtk-icon-effect: dim; }
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: rgba(255, 80, 80, 0.16);
+    border-radius: 8px;
+}
+
+/* ---- TOOLTIP ---- */
+tooltip {
+    background: linear-gradient(
+        135deg,
+        rgba(20, 20, 30, 0.92) 0%,
+        rgba(10, 10, 18, 0.96) 100%
+    );
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    color: rgba(255, 255, 255, 0.92);
+    padding: 8px 14px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+tooltip label { color: rgba(255, 255, 255, 0.92); }
+
+/* ---- ANIMATIONS ---- */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.25; }
+    100% { opacity: 1; }
+}
+
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 4px 0;
+}
