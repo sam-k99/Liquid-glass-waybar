@@ -2,7 +2,7 @@
 
 # 🌸 dotfiles
 
-**A clean, minimal, and beautiful Hyprland setup on Arch Linux**
+
 
 *Liquid glass waybar · Catppuccin Mocha · 144hz · Dual GPU optimized*
 
@@ -30,16 +30,6 @@
 | **OS** | Arch Linux |
 | **WM** | Hyprland 0.54.3 |
 | **Bar** | Waybar (liquid glass) |
-| **Launcher** | Rofi-wayland |
-| **Terminal** | Kitty |
-| **Shell** | Bash |
-| **Theme** | Catppuccin Mocha |
-| **Icons** | Papirus-Dark |
-| **Font** | JetBrainsMono Nerd Font |
-| **Wallpaper** | swww |
-| **Display** | 1920x1080 @ 144hz |
-| **GPU** | AMD Radeon (iGPU) + GTX 1650 |
-| **Bootloader** | systemd-boot |
 
 ---
 
