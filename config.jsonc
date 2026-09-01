@@ -100,7 +100,7 @@
         "format-ethernet": "󰈀 Wired",
         "format-disconnected": "󰤭",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}",
-        "on-click": "nm-connection-editor",
+        "on-click": "kitty --title nmtui -e nmtui",
         "max-length": 14
     },
 
@@ -108,7 +108,7 @@
         "format": "󰂯",
         "format-connected": "󰂱 {device_alias}",
         "tooltip-format": "{num_connections} connected",
-        "on-click": "blueman-manager"
+        "on-click": "kitty --title bluetui -e bluetui"
     },
 
     "cpu": {
